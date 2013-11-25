@@ -18,7 +18,7 @@ class ExampleUnitSpec extends UnitSpec {
       }
     }
 
-    "render the index page" in new WithApplication{
+    "render the index page" in {
       withApplication() {
         val home = route(FakeRequest(GET, "/")).get
 

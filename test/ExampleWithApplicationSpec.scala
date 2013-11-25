@@ -9,7 +9,7 @@ class ExampleWithApplicationSpec extends WithApplicationSpec {
       route(FakeRequest(GET, "/boum")) shouldBe None
     }
 
-    "render the index page" in new WithApplication{
+    "render the index page" in {
       val home = route(FakeRequest(GET, "/")).get
 
       status(home) should equal (OK)
