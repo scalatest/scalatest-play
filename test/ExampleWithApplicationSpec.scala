@@ -1,7 +1,7 @@
 import play.api.test._
 import play.api.test.Helpers._
 
-class ExampleWithApplicationSpec extends UnitSpec with ApplicationFixture {
+class ExampleWithApplicationSpec extends PlaySpec with AppFixture {
 
   "Application" should {
 
@@ -33,5 +33,4 @@ class ExampleWithApplicationSpec extends UnitSpec with ApplicationFixture {
       contentAsString(result) should include ("Your new application is ready.")
     }
   }
-
 }

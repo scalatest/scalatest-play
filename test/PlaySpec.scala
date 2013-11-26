@@ -1,6 +1,6 @@
 import org.scalatest._
 
-abstract class UnitSpec extends WordSpec
+abstract class PlaySpec extends WordSpec
+                        with OneInstancePerTest
                         with Matchers
                         with OptionValues
-                        with LoanFixtureMethods

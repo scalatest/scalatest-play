@@ -6,7 +6,19 @@ import org.openqa.selenium.WebDriver
  */
 trait LoanFixtureMethods {
 
-  def withApplication[T](app: FakeApplication = new FakeApplication())(block: => T): T = {
+  def withApp(app: FakeApplication = new FakeApplication())(block: => Unit): Unit = {
+    Helpers.running(app) {
+      block
+    }
+  }
+
+  def app(block: => Unit): Unit = {
+    Helpers.running(new FakeApplication()) {
+      block
+    }
+  }
+
+  def appUsing(app: FakeApplication)(block: => Unit): Unit = {
     Helpers.running(app) {
       block
     }
