@@ -30,3 +30,6 @@ trait LoanFixtureMethods {
   }
 
 }
+
+object LoanFixtureMethods extends LoanFixtureMethods
+

@@ -1,7 +1,7 @@
 import play.api.test._
 import play.api.test.Helpers._
 
-class ExampleWithApplicationSpec extends WithApplicationSpec {
+class ExampleWithApplicationSpec extends UnitSpec with ApplicationFixture {
 
   "Application" should {
 
