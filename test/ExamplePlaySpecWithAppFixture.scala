@@ -6,7 +6,7 @@ import play.api.test.Helpers._
  * You can mock out a whole application including requests, plugins etc.
  * For more information, consult the wiki.
  */
-class ExampleUnitSpec extends PlaySpec with AppFixture {
+class ExamplePlaySpecWithAppFixture extends PlaySpec with AppFixture {
 
   "Application" should {
 
