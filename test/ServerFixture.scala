@@ -2,12 +2,13 @@
 import org.scalatest._
 import play.api.test._
 
-trait AppFixture extends SuiteMixin { this: Suite =>
+trait ServerFixture extends SuiteMixin { this: Suite =>
 
   implicit val app: FakeApplication = new FakeApplication()
+  implicit val port: Int = Helpers.testServerPort
 
   abstract override def withFixture(test: NoArgTest) =
-    Helpers.running(app) {
+    Helpers.running(TestServer(port, app)) {
       super.withFixture(test)
     }
 }
