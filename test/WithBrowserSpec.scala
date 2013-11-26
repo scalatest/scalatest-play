@@ -6,7 +6,7 @@ abstract class WithBrowserSpec extends fixture.WordSpec
                                    with Matchers
                                    with OptionValues
                                    with HtmlUnit
-                                   with ScalaTestSupport {
+                                   with LoanFixtureMethods {
 
   protected def playApp = new FakeApplication()
 

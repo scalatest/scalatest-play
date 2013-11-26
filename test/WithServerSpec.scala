@@ -4,7 +4,7 @@ import play.api.test._
 abstract class WithServerSpec extends fixture.WordSpec
                               with Matchers
                               with OptionValues
-                              with ScalaTestSupport {
+                              with LoanFixtureMethods {
 
   protected def playApp = new FakeApplication()
 

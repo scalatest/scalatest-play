@@ -20,4 +20,4 @@ abstract class IntegrationSpec extends WordSpec
                                with Matchers
                                with OptionValues
                                with HtmlUnit
-                               with ScalaTestSupport
+                               with LoanFixtureMethods

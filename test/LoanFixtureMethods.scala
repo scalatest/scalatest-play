@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver
 /**
  * Trait to support ScalaTest usage in Play Framework.
  */
-trait ScalaTestSupport {
+trait LoanFixtureMethods {
 
   def withApplication[T](app: FakeApplication = new FakeApplication())(block: => T): T = {
     Helpers.running(app) {
